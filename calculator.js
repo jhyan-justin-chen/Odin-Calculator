@@ -58,6 +58,11 @@ function numberButtonPressed(pressed) {
     return;
   }
 
+  if (pressed === ".") {
+    if (operand2.includes(".")) {
+      return;
+    }
+  }
   operand2 += pressed;
 
   updateDisplay();
