@@ -115,7 +115,11 @@ function addHistoryLine(operator, operand1, operand2, ans) {
 
 function equalsButtonPressed() {
   num1 = parseFloat(operand1);
-  num2 = parseFloat(operand2);
+  if (operand2 === "" && ans !== "") {
+    operand2 = ans;
+  } else {
+    num2 = parseFloat(operand2);
+  }
 
   if (isNaN(num1) || isNaN(num2)) {
     console.error("Invalid operands");
