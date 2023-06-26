@@ -17,19 +17,23 @@ function divide(num1, num2) {
   return num1 / num2;
 }
 
+function round(num) {
+  return Math.round((num + Number.EPSILON) * 10000) / 10000;
+}
+
 function operate(operator, operand1, operand2) {
   switch (operator) {
     case "+":
-      return add(operand1, operand2);
+      return round(add(operand1, operand2));
 
     case "-":
-      return subtract(operand1, operand2);
+      return round(subtract(operand1, operand2));
 
     case "*":
-      return multiply(operand1, operand2);
+      return round(multiply(operand1, operand2));
 
     case "/":
-      return divide(operand1, operand2);
+      return round(divide(operand1, operand2));
 
     default:
       console.error(
