@@ -114,18 +114,21 @@ function addHistoryLine(operator, operand1, operand2, ans) {
 }
 
 function equalsButtonPressed() {
-  num1 = parseFloat(operand1);
-  if (operand2 === "" && ans !== "") {
-    operand2 = ans;
-  } else {
-    num2 = parseFloat(operand2);
-  }
-
-  if (isNaN(num1) || isNaN(num2)) {
+  let num1 = parseFloat(operand1);
+  let num2;
+  if (isNaN(num1)) {
     console.error("Invalid operands");
     return;
   }
-
+  if (operand2 === "" && ans !== "") {
+    num2 = ans;
+  } else {
+    num2 = parseFloat(operand2);
+  }
+  if (isNaN(num2)) {
+    console.error("Invalid operands");
+    return;
+  }
   ans = operate(operator, num1, num2);
   if (isNaN(ans)) {
     console.error("Invalid output");
