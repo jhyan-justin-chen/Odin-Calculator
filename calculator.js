@@ -127,7 +127,6 @@ function equalsButtonPressed() {
   let num1 = parseFloat(operand1);
   let num2;
   if (isNaN(num1)) {
-    console.error("Invalid operands");
     return;
   }
   if (operand2 === "" && ans !== "") {
@@ -136,7 +135,6 @@ function equalsButtonPressed() {
     num2 = parseFloat(operand2);
   }
   if (isNaN(num2)) {
-    console.error("Invalid operands");
     return;
   }
   ans = operate(operator, num1, num2);
