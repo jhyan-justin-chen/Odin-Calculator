@@ -149,7 +149,69 @@ function equalsButtonPressed() {
   updateDisplay();
 }
 
+function keyboardHandler(event) {
+  switch (event.key) {
+    case "1":
+      numberButtonPressed("1");
+      break;
+    case "2":
+      numberButtonPressed("2");
+      break;
+    case "3":
+      numberButtonPressed("3");
+      break;
+    case "4":
+      numberButtonPressed("4");
+      break;
+    case "5":
+      numberButtonPressed("5");
+      break;
+    case "6":
+      numberButtonPressed("6");
+      break;
+    case "7":
+      numberButtonPressed("7");
+      break;
+    case "8":
+      numberButtonPressed("8");
+      break;
+    case "9":
+      numberButtonPressed("9");
+      break;
+    case "0":
+      numberButtonPressed("0");
+      break;
+    case ".":
+      numberButtonPressed(".");
+      break;
+    case "+":
+      operatorButtonPressed("+");
+      break;
+    case "-":
+      operatorButtonPressed("-");
+      break;
+    case "/":
+      operatorButtonPressed("/");
+      break;
+    case "*":
+      operatorButtonPressed("*");
+      break;
+    case "Backspace":
+      backButtonPressed();
+      break;
+    case "Escape":
+      clearButtonPressed();
+      break;
+    case "Enter":
+    case "=":
+      equalsButtonPressed();
+      break;
+  }
+}
+
 let operand1 = "";
 let operator = "";
 let operand2 = "";
 let ans = "";
+
+document.addEventListener("keydown", keyboardHandler);
