@@ -81,7 +81,7 @@ function operatorButtonPressed(pressed) {
     equalsButtonPressed();
     operand1 = ans;
     operator = pressed;
-  } else {
+  } else if (operand2 !== "") {
     operator = pressed;
     operand1 = operand2;
     operand2 = "";
