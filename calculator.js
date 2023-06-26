@@ -93,11 +93,11 @@ function clearButtonPressed() {
 }
 
 function backButtonPressed() {
-  if (operator2 !== "") {
-    operand2 = operator2.slice(0, -1);
+  if (operand2 !== "") {
+    operand2 = operand2.slice(0, -1);
   } else if (operator !== "") {
     operator = "";
-    operand1 = operand2;
+    operand2 = operand1;
     operand1 = "";
   } else if (operand1 !== "") {
     operand1 = operand1.slice(0, -1);
