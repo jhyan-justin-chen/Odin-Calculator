@@ -12,7 +12,7 @@ function multiply(num1, num2) {
 
 function divide(num1, num2) {
   if (num2 === 0) {
-    return "INF";
+    return NaN;
   }
   return num1 / num2;
 }
@@ -69,10 +69,10 @@ function operatorButtonPressed(pressed) {
     return;
   }
 
-  if (operand2 === "") {
+  if (operand2 === "" && !isNaN(ans)) {
     operand1 = ans;
     operator = pressed;
-  } else if (operator !== "") {
+  } else if (operator !== "" && !isNaN(ans)) {
     equalsButtonPressed();
     operand1 = ans;
     operator = pressed;
@@ -129,7 +129,7 @@ function equalsButtonPressed() {
   if (isNaN(num1)) {
     return;
   }
-  if (operand2 === "" && ans !== "") {
+  if (operand2 === "" && ans !== "" && !isNaN(ans)) {
     num2 = ans;
   } else {
     num2 = parseFloat(operand2);
@@ -138,11 +138,8 @@ function equalsButtonPressed() {
     return;
   }
   ans = operate(operator, num1, num2);
-  if (isNaN(ans)) {
-    console.error("Invalid output");
-  } else {
-    addHistoryLine(operator, num1, num2, ans);
-  }
+  addHistoryLine(operator, num1, num2, ans);
+
   clearWorkspace();
   updateDisplay();
 }
