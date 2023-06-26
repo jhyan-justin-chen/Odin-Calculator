@@ -18,28 +18,125 @@
     </div>
     <div class="input">
       <div class="input-numbers">
-        <button class="input-button">9</button>
-        <button class="input-button">8</button>
-        <button class="input-button">7</button>
-        <button class="input-button">6</button>
-        <button class="input-button">5</button>
-        <button class="input-button">4</button>
-        <button class="input-button">3</button>
-        <button class="input-button">2</button>
-        <button class="input-button">1</button>
-        <button class="input-button input-button--wide">0</button>
-        <button class="input-button">.</button>
+        <button
+          class="input-button"
+          value="7"
+          onclick="numberButtonPressed(this.value)"
+        >
+          7
+        </button>
+        <button
+          class="input-button"
+          value="8"
+          onclick="numberButtonPressed(this.value)"
+        >
+          8
+        </button>
+        <button
+          class="input-button"
+          value="9"
+          onclick="numberButtonPressed(this.value)"
+        >
+          9
+        </button>
+        <button
+          class="input-button"
+          value="4"
+          onclick="numberButtonPressed(this.value)"
+        >
+          4
+        </button>
+        <button
+          class="input-button"
+          value="5"
+          onclick="numberButtonPressed(this.value)"
+        >
+          5
+        </button>
+        <button
+          class="input-button"
+          value="6"
+          onclick="numberButtonPressed(this.value)"
+        >
+          6
+        </button>
+        <button
+          class="input-button"
+          value="1"
+          onclick="numberButtonPressed(this.value)"
+        >
+          1
+        </button>
+        <button
+          class="input-button"
+          value="2"
+          onclick="numberButtonPressed(this.value)"
+        >
+          2
+        </button>
+        <button
+          class="input-button"
+          value="3"
+          onclick="numberButtonPressed(this.value)"
+        >
+          3
+        </button>
+        <button
+          class="input-button input-button--wide"
+          value="0"
+          onclick="numberButtonPressed(this.value)"
+        >
+          0
+        </button>
+        <button
+          class="input-button"
+          value="."
+          onclick="numberButtonPressed(this.value)"
+        >
+          .
+        </button>
       </div>
       <div class="input-operators">
-        <button class="input-button">+</button>
-        <button class="input-button">-</button>
-        <button class="input-button">*</button>
-        <button class="input-button">/</button>
+        <button
+          class="input-button"
+          value="*"
+          onclick="operatorButtonPressed(this.value)"
+        >
+          *
+        </button>
+        <button
+          class="input-button"
+          value="/"
+          onclick="operatorButtonPressed(this.value)"
+        >
+          /
+        </button>
+        <button
+          class="input-button"
+          value="+"
+          onclick="operatorButtonPressed(this.value)"
+        >
+          +
+        </button>
+        <button
+          class="input-button"
+          value="-"
+          onclick="operatorButtonPressed(this.value)"
+        >
+          -
+        </button>
       </div>
       <div class="input-calc">
-        <button class="input-button">CLEAR</button>
-        <button class="input-button"><-</button>
-        <button class="input-button input-button--tall">=</button>
+        <button class="input-button" onclick="clearButtonPressed()">
+          CLEAR
+        </button>
+        <button class="input-button" onclick="backButtonPressed()"><-</button>
+        <button
+          class="input-button input-button--tall"
+          onclick="equalsButtonPressed()"
+        >
+          =
+        </button>
       </div>
     </div>
   </body>
