@@ -207,6 +207,8 @@ function keyboardHandler(event) {
       equalsButtonPressed();
       break;
   }
+  event.stopPropagation();
+  event.preventDefault();
 }
 
 let operand1 = "";
