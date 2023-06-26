@@ -9,37 +9,42 @@
   </head>
   <body>
     <div class="display">
-      <div class="display-history"></div>
-      <div class="display-firstoperand"></div>
+      <div class="display-history">
+        <div class="display-history-line">1200 * 23 = 38</div>
+        <div class="display-history-line">2 * 23 = 3</div>
+      </div>
+      <div class="display-firstoperand">239</div>
       <div class="display-workarea">
-        <div class="display-operator"></div>
-        <div class="display-secondoperand"></div>
+        <div class="display-operator">+</div>
+        <div class="display-secondoperand">23</div>
       </div>
     </div>
     <div class="input">
       <div class="input-numbers">
-        <div class="input-numbers-button">9</div>
-        <div class="input-numbers-button">8</div>
-        <div class="input-numbers-button">7</div>
-        <div class="input-numbers-button">6</div>
-        <div class="input-numbers-button">5</div>
-        <div class="input-numbers-button">4</div>
-        <div class="input-numbers-button">3</div>
-        <div class="input-numbers-button">2</div>
-        <div class="input-numbers-button">1</div>
-        <div class="input-numbers-button">0</div>
-        <div class="input-numbers-button">.</div>
+        <button class="input-numbers-button">9</button>
+        <button class="input-numbers-button">8</button>
+        <button class="input-numbers-button">7</button>
+        <button class="input-numbers-button">6</button>
+        <button class="input-numbers-button">5</button>
+        <button class="input-numbers-button">4</button>
+        <button class="input-numbers-button">3</button>
+        <button class="input-numbers-button">2</button>
+        <button class="input-numbers-button">1</button>
+        <button class="input-numbers-button">0</button>
+        <button class="input-numbers-button input-numbers-button--dot">
+          .
+        </button>
       </div>
-      <div class="input-operands">
-        <div class="input-operands-button">+</div>
-        <div class="input-operands-button">-</div>
-        <div class="input-operands-button">*</div>
-        <div class="input-operands-button">/</div>
+      <div class="input-operators">
+        <button class="input-operators-button">+</button>
+        <button class="input-operators-button">-</button>
+        <button class="input-operators-button">*</button>
+        <button class="input-operators-button">/</button>
       </div>
       <div class="input-calc">
-        <div class="input-calc-button">CLEAR</div>
-        <div class="input-calc-button"><-</div>
-        <div class="input-calc-button">=</div>
+        <button class="input-calc-button">CLEAR</button>
+        <button class="input-calc-button"><-</button>
+        <button class="input-calc-button">=</button>
       </div>
     </div>
   </body>
