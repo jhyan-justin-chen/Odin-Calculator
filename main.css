@@ -19,7 +19,7 @@ body {
 .display-history {
   background-color: lightyellow;
   display: flex;
-  flex-flow: column-reverse;
+  flex-flow: column;
   flex: 85 0 0;
 }
 
